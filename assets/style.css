@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 header {
     display: flex;
     justify-content: space-between;
@@ -13,6 +14,8 @@ header {
 }
 
 header h1{
+    flex-basis: 500px;
+    text-align: right;
     padding: 5px;
     background-color: aqua;
     
@@ -29,17 +32,51 @@ header nav ul li {
 header nav ul li a{
     color: aqua;
 }
-/* include css for the bigger img */
+/* Learnt from Codepen Website*/
+.navhover li a {
+    background:  linear-gradient( rgb(82, 78, 78) 50%, aqua 50%, aqua);
+    background-size: 100% 200%;
+    transition: background .4s;
+  }
+  .navhover li a:hover {
+    background-position: 100% 100%;
+    color: black;
+  }
+
+.bgimage img{
+    height: 150px;
+    width: 100%;
+}
+
+.bgimage img{
+    position: relative;
+}
+
+.bgimage p{
+    position: absolute;
+    background-color: aqua;
+    color: black;
+    left:1290px;
+    bottom: 480px;
+}
+.aboutme,
+.contacts,
+.work{
+    margin-left: 100px;
+    margin-right: 100px;
+} 
 
 .aboutme{
     display:flex;
-    height: 100px;
+    height: 150px;
 
 }
+
 .aboutme h2{
-    border-right: 3px solid black;
-    padding-left: 50px;
-    font-size: 35px;
+    border-right: 3px solid rgba(52, 52, 96, 0.99);
+    color: rgba(52, 52, 96, 0.99);
+    padding-left: 42px;
+    font-size: 60px;
     text-align: right;
     padding-right: 5px;
     flex-basis: 300px;
@@ -48,17 +85,19 @@ header nav ul li a{
 .aboutme p{
     margin-left: 20px;
     margin-bottom: 10px;
+    font-size: small;
 }
 .work{
     display: flex;
-    margin-top: 10px;
-    height: 300px;
+    margin-top: 20px;
+    height: 400px;
 
 }
 .work h2{
-    border-right: 3px solid black;  
-    padding-left: 85px;
-    font-size: 30px;
+    border-right: 3px solid rgba(52, 52, 96, 0.99);  
+    color: rgba(52, 52, 96, 0.99);
+    padding-left: 56px;
+    font-size: 60px;
     text-align: right;
     padding-right: 5px;
 }
@@ -67,41 +106,93 @@ header nav ul li a{
     display: flex;
     height: 50px;
     flex-wrap: wrap;
-    margin: 20px;
-  flex-basis: 100%;
+    margin-left : 20px;
+    flex-basis: 100%;
 
 }
 
 .ids{
-    border: 3px solid black;
+    border: 3px solid aqua;
     top: 0;
     padding-left: 10px;
     margin: 3px;
-    flex: 1 0 400px;
-    height: 50px;
+    flex: 1 0 380px;
+    height: 90px;
 }
 
 .img1{
     flex-basis: 75%;
-    height: 150px;
+    height: 200px;
+    background-color: rgba(119, 136, 153, 0.701);
+    position: relative;
+    opacity: 0.7;
+}
+
+.img1 p {
+    position: absolute;
+   bottom: 10px;
+    left:0;
+    padding: 3px;
+    font-weight: bold;
+    font-family: serif;
+    background-color: aqua;
+
+}
+.ids:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.img2{
+    background-image: url("./led-wall.jpeg");
+    opacity: 0.7;
+}
+
+.img3{
+    background-image: url("./run-buddy.png");
+    opacity: 0.7;
+}
+
+.img4{
+    background-color: rgba(117, 152, 171, 0.989);
+    opacity: 0.7;
+}
+
+.img5{
+    opacity: 0.7;
 }
 
 .contacts{
     display: flex;
-    height: 100px;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 25px;
-    margin-top: 10px;
+    height: 130px;
+    margin-top: 10px; 
 }
 
 .contacts h2{
-    display: flex;
-    flex-wrap: wrap;
-    border-right: 3px solid black;
-    padding-left: 10px;
-    font-size: 30px;
+    border-right: 3px solid rgba(52, 52, 96, 0.99);
+    color: rgba(52, 52, 96, 0.99);
+    /* padding-left: 10px; */
+    font-size: 60px;
     text-align: right;
     padding-right: 5px;
+    flex-basis: 50px;
 }
+.navcontacts{
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: 67%;
+    align-items: center;
+}
+
+.navcontacts a {
+    background:  linear-gradient( white 50%, aqua 50%, aqua);
+    background-size: 100% 200%;
+    transition: background .4s;
+  }
+
+  .navcontacts  a:hover {
+    background-position: 100% 100%;
+    color: black;
+  }
+
 

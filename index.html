@@ -10,21 +10,21 @@
 <body>
     <header>
         <h1>Anu Priya Govindarajan</h1>
-        <nav>
+        <nav class="navhover">
             <ul>
-                <li><a href="">About Me</a></li>
-                <li><a href="">Work</a></li>
-                <li><a href="">Contact Me</a></li>
+                <li><a href="#aboutme">About Me</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contactme">Contact Me</a></li>
                 <li><a href="">Resume</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <img src="" alt="">
+        <section class="bgimage">
+            <img src="./assets/portfolio-bg.jpg" alt="blue pattern image">
             <p>cool subtitile here!</p>
         </section>
-        <section class="aboutme">
+        <section id="aboutme" class="aboutme">
             <h2>About Me</h2>
         <div>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, repellendus nobis dolorum quasi ad enim culpa delectus veritatis molestias magni? Dolorum esse ea dolore quidem, porro fuga? Nam, molestiae nemo.</p>
@@ -33,33 +33,36 @@
             </p>
         </div>
         </section>
-        <section class="work">
+        <section id="work" class="work">
             <h2>Work</h2>
             <div class="images">
                 <div class="ids img1">
+                   <h3>Surf Report</h3>
+                   <p>Mern/stack</p>
+                </div>
+                <div class="ids img2">
                     <img src="" alt="surf report">
                 </div>
-                <div class="ids ">
+                <div class="ids img3">
                     <img src="" alt="surf report">
                 </div>
-                <div class="ids">
+                <div class="ids img4">
                     <img src="" alt="surf report">
                 </div>
-                <div class="ids">
-                    <img src="" alt="surf report">
-                </div>
-                <div class="ids">
+                <div class="ids img5">
                     <img src="" alt="surf report">
                 </div>
             </div>
         </section>
-        <section class="contacts">
+        <section id="contactme"  class="contacts">
          <h2>Contact Me</h2>
-            <div><a href="">555.555.555</a></div>
-            <div><a href="">Anup@gmail.com</a></div>
-            <div><a href="">GitHub</a></div>
-            <div><a href="">Twitter</a></div>
-            <div><a href="">Spotify</a></div>
+         <nav class="navcontacts">
+            <a href="">555.555.555</a>
+            <a href="">Anup@gmail.com</a>
+            <a href="">GitHub</a>
+            <a href="">Twitter</a>
+            <a href="">Spotify</a>
+        </nav>
         </section>
     </main>
 </body>
