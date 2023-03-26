@@ -27,10 +27,13 @@ header ul{
 header nav ul li {
     display: inline-block;
     margin-right: 20px;
+    height: auto;
 }
 
 header nav ul li a{
     color: aqua;
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
 }
 /* Learnt from Codepen Website*/
 .navhover li a {
@@ -56,8 +59,8 @@ header nav ul li a{
     position: absolute;
     background-color: aqua;
     color: black;
-    left:1290px;
-    bottom: 480px;
+    right:100px;
+    bottom: 525px;
 }
 .aboutme,
 .contacts,
@@ -79,7 +82,7 @@ header nav ul li a{
     font-size: 60px;
     text-align: right;
     padding-right: 5px;
-    flex-basis: 300px;
+    /* flex-basis: 300px; */
 }
 
 .aboutme p{
@@ -123,21 +126,51 @@ header nav ul li a{
 .img1{
     flex-basis: 75%;
     height: 200px;
-    background-color: rgba(119, 136, 153, 0.701);
     position: relative;
+    background-image: url("./surfreport.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
     opacity: 0.7;
 }
 
-.img1 p {
+/* .img1::before{
+    content: "";
+   
+    background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+   
+} */
+
+
+.img1 .label1,
+.img2 .label2,
+.img3 .label3,
+.img4 .label4,
+.img5 .label5
+ {
     position: absolute;
-   bottom: 10px;
+    bottom: 10px;
     left:0;
     padding: 3px;
     font-weight: bold;
     font-family: serif;
     background-color: aqua;
-
 }
+/* .img1 .label1{
+    position: relative;
+    bottom: 10px;
+    left:0;
+    padding: 3px;
+    font-weight: bold;
+    font-family: serif;
+    background-color: aqua;
+    background-size: contain;} */
+
+
 .ids:hover{
     opacity: 1;
     cursor: pointer;
@@ -146,20 +179,31 @@ header nav ul li a{
 .img2{
     background-image: url("./led-wall.jpeg");
     opacity: 0.7;
+    position: relative;
 }
 
 .img3{
-    background-image: url("./run-buddy.png");
+    background-image: url("./calculator.jpeg");
+    
     opacity: 0.7;
+    position: relative;
 }
 
 .img4{
-    background-color: rgba(117, 152, 171, 0.989);
+    background-image: url("./calculator.jpeg");
     opacity: 0.7;
+    position: relative;
 }
 
 .img5{
+    background-image: url("./run-buddy.png");
     opacity: 0.7;
+    position: relative;
+}
+
+.ids > * p{
+    font-style: italic;
+    font-size: smaller;
 }
 
 .contacts{
@@ -188,6 +232,8 @@ header nav ul li a{
     background:  linear-gradient( white 50%, aqua 50%, aqua);
     background-size: 100% 200%;
     transition: background .4s;
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
   }
 
   .navcontacts  a:hover {
@@ -195,4 +241,84 @@ header nav ul li a{
     color: black;
   }
 
+@media screen and (max-width: 768px) {
+    header{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100px;
+    }
+    
+    header h1{
+        flex-basis: auto;
+        width: 100%;
+        text-align: center;
+    }
+    
+    header nav ul li a{
+      font-size: 20px;
+    }
+    .bgimage img{
+        height: 220px;
+    }
 
+    /* .bgimage p{
+    display: inline-flex;
+    font-size: 20px;
+    } */
+    .aboutme,
+    .contacts,
+    .work{
+    margin-left: 10px;
+    margin-right: 10px;
+    } 
+
+    .aboutme,
+    .work,
+    .contacts,
+    .navcontacts{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .aboutme h2,
+    .work h2,
+    .contacts h2
+    {
+        text-align: left;
+        border-bottom:3px solid rgba(52, 52, 96, 0.99) ;
+        border-right: 0px;
+    }
+
+    .aboutme h2,
+    .work h2{
+        padding-left: 0;
+    }
+    .aboutme,
+    .work{
+        height: auto;
+    }
+
+    /* .ids .img1{
+        margin-left: 0;
+        /* text-align: left;
+    } */
+    .aboutme p{
+        margin-left: 0;
+        /* overflow: hidden; */
+    }
+    .navcontacts{
+        align-items: flex-start;
+        justify-content: space-between;
+       
+    }
+    .navcontacts a{
+        font-size: 25px;
+        padding: 5px;
+    }
+
+    .contacts{
+       height: 350px;
+
+    }
+}
