@@ -1,9 +1,13 @@
+:root{
+    --coloraqua: aqua;
+    --txtcolor: rgba(52, 52, 96, 0.99);
+}
+
 * {
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
-
 
 header {
     display: flex;
@@ -17,51 +21,52 @@ header h1{
     flex-basis: 500px;
     text-align: right;
     padding: 5px;
-    background-color: aqua;
-    
-}
-header ul{
-    list-style-type: none;
+    background-color: var(--coloraqua);   
 }
 
 header nav ul li {
+    list-style-type: none;
     display: inline-block;
     margin-right: 20px;
     height: auto;
 }
 
 header nav ul li a{
-    color: aqua;
+    color:  var(--coloraqua);
     text-decoration-line: underline;
     text-underline-offset: 4px;
 }
+
 /* Learnt from Codepen Website*/
 .navhover li a {
-    background:  linear-gradient( rgb(82, 78, 78) 50%, aqua 50%, aqua);
+    background:  linear-gradient( rgb(82, 78, 78) 50%,  var(--coloraqua) 50%,  var(--coloraqua));
     background-size: 100% 200%;
     transition: background .4s;
   }
-  .navhover li a:hover {
+  
+.navhover li a:hover {
     background-position: 100% 100%;
     color: black;
   }
 
-.bgimage img{
+.bgimage{
+    display: flex;
+    position: relative;
+  }
+
+.bgimage img{   
     height: 150px;
     width: 100%;
 }
 
-.bgimage img{
-    position: relative;
+.bgimage div p{
+    position: absolute;
+    background-color:  var(--coloraqua);
+    color: black;
+    right:10px;
+    bottom: 20px;
 }
 
-.bgimage p{
-    position: absolute;
-    background-color: aqua;
-    color: black;
-    right:100px;
-    bottom: 525px;
-}
 .aboutme,
 .contacts,
 .work{
@@ -72,17 +77,16 @@ header nav ul li a{
 .aboutme{
     display:flex;
     height: 150px;
-
+    margin-top: 10px;
 }
 
 .aboutme h2{
-    border-right: 3px solid rgba(52, 52, 96, 0.99);
-    color: rgba(52, 52, 96, 0.99);
+    border-right: 3px solid var(--txtcolor);
+    color:  var(--txtcolor);
     padding-left: 42px;
     font-size: 60px;
     text-align: right;
     padding-right: 5px;
-    /* flex-basis: 300px; */
 }
 
 .aboutme p{
@@ -97,8 +101,8 @@ header nav ul li a{
 
 }
 .work h2{
-    border-right: 3px solid rgba(52, 52, 96, 0.99);  
-    color: rgba(52, 52, 96, 0.99);
+    border-right: 3px solid  var(--txtcolor);  
+    color:  var(--txtcolor);
     padding-left: 56px;
     font-size: 60px;
     text-align: right;
@@ -114,12 +118,12 @@ header nav ul li a{
 
 }
 
-.ids{
-    border: 3px solid aqua;
+.imgbox{
+    border: 3px solid  var(--coloraqua);
     top: 0;
     padding-left: 10px;
     margin: 3px;
-    flex: 1 0 380px;
+    flex: 1 0 400px;
     height: 90px;
 }
 .img1 { 
@@ -179,11 +183,10 @@ header nav ul li a{
     padding: 3px;
     font-weight: bold;
     font-family: serif;
-    background-color: aqua;
+    background-color:  var(--coloraqua);
 }
 
-
-.ids:hover{
+.imgbox:hover{
     opacity: 1;
     cursor: pointer;
 }
@@ -195,8 +198,7 @@ header nav ul li a{
 }
 
 .img3{
-    background-image: url("./calculator.jpeg");
-    
+    background-image: url("./calculator.jpeg"); 
     opacity: 0.7;
     position: relative;
 }
@@ -213,7 +215,7 @@ header nav ul li a{
     position: relative;
 }
 
-.ids > * p{
+.imgbox > * p{
     font-style: italic;
     font-size: smaller;
 }
@@ -225,9 +227,8 @@ header nav ul li a{
 }
 
 .contacts h2{
-    border-right: 3px solid rgba(52, 52, 96, 0.99);
-    color: rgba(52, 52, 96, 0.99);
-    /* padding-left: 10px; */
+    border-right: 3px solid  var(--txtcolor);
+    color:  var(--txtcolor);
     font-size: 60px;
     text-align: right;
     padding-right: 5px;
@@ -240,8 +241,11 @@ header nav ul li a{
     align-items: center;
 }
 
+.navcontacts a{
+    text-decoration: none;
+}
 .navcontacts a {
-    background:  linear-gradient( white 50%, aqua 50%, aqua);
+    background:  linear-gradient( white 50%,  var(--coloraqua) 50%,  var(--coloraqua));
     background-size: 100% 200%;
     transition: background .4s;
     text-decoration-line: underline;
@@ -254,11 +258,15 @@ header nav ul li a{
   }
 
 @media screen and (max-width: 768px) {
+
+    body{
+        font-family: monospace;
+    }
     header{
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        height: 100px;
+        height: 130px;
     }
     
     header h1{
@@ -266,18 +274,29 @@ header nav ul li a{
         width: 100%;
         text-align: center;
     }
+
+    header nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;  
+        margin-top: 10px;
+    }
     
     header nav ul li a{
-      font-size: 20px;
+      font-size: 25px;
     }
+
     .bgimage img{
         height: 220px;
     }
 
-    /* .bgimage p{
-    display: inline-flex;
-    font-size: 20px;
-    } */
+    .bgimage div p{
+        font-size: 35px;
+        right: 50px;
+        left: 50px;
+    }
+
     .aboutme,
     .contacts,
     .work{
@@ -298,27 +317,36 @@ header nav ul li a{
     .contacts h2
     {
         text-align: left;
-        border-bottom:3px solid rgba(52, 52, 96, 0.99) ;
+        border-bottom:3px solid var(--txtcolor) ;
         border-right: 0px;
+        font-family: monospace;
     }
 
     .aboutme h2,
-    .work h2{
+    .work h2
+    {
         padding-left: 0;
     }
+
     .aboutme,
     .work{
         height: auto;
     }
 
-    /* .ids .img1{
+    .aboutme p,
+    .images
+    {
         margin-left: 0;
-        /* text-align: left;
-    } */
-    .aboutme p{
-        margin-left: 0;
-        /* overflow: hidden; */
     }
+
+    .img1,
+    .img2,
+    .img3,
+    .img4,
+    .img5{
+        flex-basis: 100%;
+    }
+
     .navcontacts{
         align-items: flex-start;
         justify-content: space-between;
@@ -331,6 +359,5 @@ header nav ul li a{
 
     .contacts{
        height: 350px;
-
     }
 }
