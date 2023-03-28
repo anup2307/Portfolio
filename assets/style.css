@@ -55,7 +55,7 @@ header nav ul li a{
   }
 
 .bgimage img{   
-    height: 150px;
+    height: 180px;
     width: 100%;
 }
 
@@ -63,8 +63,15 @@ header nav ul li a{
     position: absolute;
     background-color:  var(--coloraqua);
     color: black;
-    right:10px;
-    bottom: 20px;
+    font-size: 30px;
+    right:20px;
+    bottom: 10px;
+}
+
+.profilepic{
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 15px;
 }
 
 .aboutme,
@@ -76,14 +83,13 @@ header nav ul li a{
 
 .aboutme{
     display:flex;
-    height: 150px;
     margin-top: 10px;
 }
 
 .aboutme h2{
     border-right: 3px solid var(--txtcolor);
     color:  var(--txtcolor);
-    padding-left: 42px;
+    /* padding-left: 42px; */
     font-size: 60px;
     text-align: right;
     padding-right: 5px;
@@ -94,46 +100,55 @@ header nav ul li a{
     margin-bottom: 10px;
     font-size: small;
 }
+
 .work{
     display: flex;
     margin-top: 20px;
-    height: 400px;
-
+    height: 600px;
+    /* width: 100%;
+    max-width: 48rem; */
 }
+
 .work h2{
     border-right: 3px solid  var(--txtcolor);  
     color:  var(--txtcolor);
     padding-left: 56px;
     font-size: 60px;
     text-align: right;
-    padding-right: 5px;
+    padding-right: 5px; 
 }
 
 .images{
     display: flex;
-    height: 50px;
     flex-wrap: wrap;
     margin-left : 20px;
-    flex-basis: 100%;
-
+    /* flex-basis: 100%; */
+    width: 100%;
+    
 }
 
-.imgbox{
+.images > a {
+    margin: 5px;
+}
+
+/* .imgbox{
     border: 3px solid  var(--coloraqua);
-    top: 0;
-    padding-left: 10px;
-    margin: 3px;
-    flex: 1 0 400px;
-    height: 90px;
-}
+    /* margin: 3px; */
+    /* flex: 1 0 50%; */
+    /* height: 160px;  
+} */
+
 .img1 { 
-    flex-basis: 75%;
-      height: 200px;
+      /* flex-basis: 90%; */
+      border: 3px solid  var(--coloraqua);
+      flex: 1 0 95%;
+      height: auto;
       position: relative;
       background-image: url("./surfreport.jpeg"); 
-       background-repeat: no-repeat;
+      background-repeat: no-repeat;
       background-size: cover;
       opacity: 0.7;
+      margin: 3px;
     }
 
 /* .img1 { 
@@ -186,30 +201,44 @@ header nav ul li a{
     background-color:  var(--coloraqua);
 }
 
-.imgbox:hover{
+.img1:hover{
     opacity: 1;
     cursor: pointer;
 }
 
 .img2{
+    border: 3px solid  var(--coloraqua);
+    flex: 1 0 45%;
     background-image: url("./led-wall.jpeg");
     opacity: 0.7;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .img3{
+    border: 3px solid  var(--coloraqua);
+    flex: 1 0 45%;
     background-image: url("./calculator.jpeg"); 
     opacity: 0.7;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .img4{
-    background-image: url("./calculator.jpeg");
+    border: 3px solid  var(--coloraqua);
+    flex: 1 0 45%;
+    background-image: url("./pastelpuzzle.jpeg");
     opacity: 0.7;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .img5{
+    border: 3px solid  var(--coloraqua);
+    flex: 1 0 45%;
     background-image: url("./run-buddy.png");
     opacity: 0.7;
     position: relative;
@@ -266,7 +295,8 @@ header nav ul li a{
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        height: 130px;
+        height: auto;
+        padding-bottom: 10px;
     }
     
     header h1{
@@ -289,12 +319,6 @@ header nav ul li a{
 
     .bgimage img{
         height: 220px;
-    }
-
-    .bgimage div p{
-        font-size: 35px;
-        right: 50px;
-        left: 50px;
     }
 
     .aboutme,
@@ -328,8 +352,8 @@ header nav ul li a{
         padding-left: 0;
     }
 
-    .aboutme,
-    .work{
+    .aboutme
+    {
         height: auto;
     }
 
@@ -339,6 +363,9 @@ header nav ul li a{
         margin-left: 0;
     }
 
+    .images{
+        flex: 1 0 50%;
+    } 
     .img1,
     .img2,
     .img3,
@@ -347,6 +374,9 @@ header nav ul li a{
         flex-basis: 100%;
     }
 
+    .imgbox > * p{
+         font-family:  monospace;
+    }
     .navcontacts{
         align-items: flex-start;
         justify-content: space-between;
@@ -361,3 +391,11 @@ header nav ul li a{
        height: 350px;
     }
 }
+
+/* @media  screen and (max-width: 1240px)  {
+    .work{
+        height: ;
+    }
+} */
+
+    
