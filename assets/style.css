@@ -41,7 +41,7 @@ header nav ul li a{
 .navhover li a {
     background:  linear-gradient( rgb(82, 78, 78) 50%,  var(--coloraqua) 50%,  var(--coloraqua));
     background-size: 100% 200%;
-    transition: background .4s;
+    transition: .4s;
   }
   
 .navhover li a:hover {
@@ -89,13 +89,14 @@ header nav ul li a{
 .aboutme h2{
     border-right: 3px solid var(--txtcolor);
     color:  var(--txtcolor);
-    /* padding-left: 42px; */
+    padding-left: 42px;
     font-size: 60px;
     text-align: right;
     padding-right: 5px;
+    flex-basis: 50px;
 }
 
-.aboutme p{
+.aboutme-p p{
     margin-left: 20px;
     margin-bottom: 10px;
     font-size: small;
@@ -105,8 +106,6 @@ header nav ul li a{
     display: flex;
     margin-top: 20px;
     height: 600px;
-    /* width: 100%;
-    max-width: 48rem; */
 }
 
 .work h2{
@@ -122,89 +121,23 @@ header nav ul li a{
     display: flex;
     flex-wrap: wrap;
     margin-left : 20px;
-    /* flex-basis: 100%; */
     width: 100%;
-    
 }
 
 .images > a {
     margin: 5px;
 }
 
-/* .imgbox{
-    border: 3px solid  var(--coloraqua);
-    /* margin: 3px; */
-    /* flex: 1 0 50%; */
-    /* height: 160px;  
-} */
-
 .img1 { 
-      /* flex-basis: 90%; */
-      border: 3px solid  var(--coloraqua);
-      flex: 1 0 95%;
-      height: auto;
-      position: relative;
-      background-image: url("./surfreport.jpeg"); 
-      background-repeat: no-repeat;
-      background-size: cover;
-      opacity: 0.7;
-      margin: 3px;
-    }
-
-/* .img1 { 
-    flex-basis: 75%;
-      height: 200px;
-      position: relative;
-      background-image: url("./surfreport.jpeg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      
-    }
-  
-    .img1::before {
-      content: "";
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-      background-image: url("./surfreport.jpeg");
-      background-repeat: no-repeat;
-      background-size: cover;
-       background-color: rgba(0,0,0,0.25);
-      opacity: 0.7;
-    }
-  
-  .img1 .label1 {
+    border: 3px solid  var(--coloraqua);
+    flex: 1 0 95%;
+    /* height: auto; */
     position: relative;
-      bottom: 10px;
-      left:0;
-      padding: 3px;
-      font-weight: bold;
-      font-family: serif;
-      background-color: aqua;
-  } */ 
-
-
-.img1 .label1,
-.img2 .label2,
-.img3 .label3,
-.img4 .label4,
-.img5 .label5
- {
-    position: absolute;
-    bottom: 10px;
-    left:0;
-    padding: 3px;
-    font-weight: bold;
-    font-family: serif;
-    background-color:  var(--coloraqua);
-}
-
-.img1:hover{
-    opacity: 1;
-    cursor: pointer;
-}
+    background-image: url("./Horiseon.png"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+     }
 
 .img2{
     border: 3px solid  var(--coloraqua);
@@ -244,7 +177,31 @@ header nav ul li a{
     position: relative;
 }
 
-.imgbox > * p{
+.img1 .label1,
+.img2 .label2,
+.img3 .label3,
+.img4 .label4,
+.img5 .label5
+ {
+    position: absolute;
+    bottom: 10px;
+    left:0;
+    padding: 3px;
+    font-weight: bold;
+    font-family: serif;
+    background-color:  var(--coloraqua);
+}
+
+.img1:hover,
+.img2:hover,
+.img3:hover,
+.img4:hover,
+.img5:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.images > * p{
     font-style: italic;
     font-size: smaller;
 }
@@ -276,15 +233,15 @@ header nav ul li a{
 .navcontacts a {
     background:  linear-gradient( white 50%,  var(--coloraqua) 50%,  var(--coloraqua));
     background-size: 100% 200%;
-    transition: background .4s;
+    transition: .4s;
     text-decoration-line: underline;
     text-underline-offset: 4px;
-  }
+}
 
-  .navcontacts  a:hover {
+.navcontacts  a:hover {
     background-position: 100% 100%;
     color: black;
-  }
+}
 
 @media screen and (max-width: 768px) {
 
@@ -366,6 +323,7 @@ header nav ul li a{
     .images{
         flex: 1 0 50%;
     } 
+
     .img1,
     .img2,
     .img3,
@@ -391,11 +349,4 @@ header nav ul li a{
        height: 350px;
     }
 }
-
-/* @media  screen and (max-width: 1240px)  {
-    .work{
-        height: ;
-    }
-} */
-
     
