@@ -18,10 +18,11 @@ header {
 }
 
 header h1{
-    flex-basis: 500px;
+    flex-basis: 400px;
     text-align: right;
     padding: 5px;
     background-color: var(--coloraqua);   
+    border-radius: 0 6px 6px 0;
 }
 
 header nav ul li {
@@ -66,6 +67,8 @@ header nav ul li a{
     font-size: 30px;
     right:20px;
     bottom: 10px;
+    border-radius: 6px;
+    width: fit-content;
 }
 
 .profilepic{
@@ -105,7 +108,7 @@ header nav ul li a{
 .work{
     display: flex;
     margin-top: 20px;
-    height: 600px;
+    /* height: 600px; */
 }
 
 .work h2{
@@ -131,13 +134,38 @@ header nav ul li a{
 .img1 { 
     border: 3px solid  var(--coloraqua);
     flex: 1 0 95%;
-    /* height: auto; */
+    height: 350px;
     position: relative;
     background-image: url("./Horiseon.png"); 
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
     opacity: 0.7;
-     }
+}
+
+/* 
+    .img1::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      background-image: url("./Horiseon.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.7;
+    }
+  
+  .img1 .label1 {
+    position: relative;
+      bottom: 10px;
+      left:0;
+      padding: 3px;
+      font-weight: bold;
+      font-family: serif;
+      background-color: aqua;
+  } */
+
 
 .img2{
     border: 3px solid  var(--coloraqua);
@@ -147,6 +175,7 @@ header nav ul li a{
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 200px;
 }
 
 .img3{
@@ -157,6 +186,7 @@ header nav ul li a{
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 200px;
 }
 
 .img4{
@@ -167,6 +197,7 @@ header nav ul li a{
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 200px;
 }
 
 .img5{
@@ -175,14 +206,10 @@ header nav ul li a{
     background-image: url("./run-buddy.png");
     opacity: 0.7;
     position: relative;
+    height: 200px;
 }
 
-.img1 .label1,
-.img2 .label2,
-.img3 .label3,
-.img4 .label4,
-.img5 .label5
- {
+.label {
     position: absolute;
     bottom: 10px;
     left:0;
@@ -190,6 +217,7 @@ header nav ul li a{
     font-weight: bold;
     font-family: serif;
     background-color:  var(--coloraqua);
+    color: black;
 }
 
 .img1:hover,
@@ -254,14 +282,12 @@ header nav ul li a{
         justify-content: flex-start;
         height: auto;
         padding-bottom: 10px;
-    }
-    
+    }    
     header h1{
         flex-basis: auto;
         width: 100%;
         text-align: center;
     }
-
     header nav ul{
         display: flex;
         flex-wrap: wrap;
@@ -269,22 +295,21 @@ header nav ul li a{
         align-items: center;  
         margin-top: 10px;
     }
-    
     header nav ul li a{
       font-size: 25px;
     }
-
     .bgimage img{
         height: 220px;
     }
-
+    .bgimage p{
+        left:20px;
+    }
     .aboutme,
     .contacts,
     .work{
     margin-left: 10px;
     margin-right: 10px;
     } 
-
     .aboutme,
     .work,
     .contacts,
@@ -292,7 +317,6 @@ header nav ul li a{
         flex-direction: column;
         justify-content: flex-start;
     }
-
     .aboutme h2,
     .work h2,
     .contacts h2
@@ -302,28 +326,23 @@ header nav ul li a{
         border-right: 0px;
         font-family: monospace;
     }
-
     .aboutme h2,
     .work h2
     {
         padding-left: 0;
     }
-
     .aboutme
     {
         height: auto;
     }
-
     .aboutme p,
     .images
     {
         margin-left: 0;
     }
-
     .images{
         flex: 1 0 50%;
     } 
-
     .img1,
     .img2,
     .img3,
@@ -331,7 +350,9 @@ header nav ul li a{
     .img5{
         flex-basis: 100%;
     }
-
+    .img1{
+        height: 200px;
+    }
     .imgbox > * p{
          font-family:  monospace;
     }
@@ -344,7 +365,6 @@ header nav ul li a{
         font-size: 25px;
         padding: 5px;
     }
-
     .contacts{
        height: 350px;
     }
