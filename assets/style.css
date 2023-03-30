@@ -109,7 +109,6 @@ header nav ul li a{
 .work{
     display: flex;
     margin-top: 20px;
-    /* height: 600px; */
 }
 
 .work h2{
@@ -139,6 +138,7 @@ header nav ul li a{
     position: relative;
 }
 
+/* Learnt from coder-coder.com Website */
 .img1::before {
     content: "";
     position: absolute;
